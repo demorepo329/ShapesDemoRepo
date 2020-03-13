@@ -10,7 +10,7 @@ namespace ShapesDemoTests
         public void Constructor_ValidValue_ReturnsTriangleObject()
         {
             // Arrange
-            const double a = 1;
+            const double a = 1.5;
             const double b = 2;
             const double c = 3;
             // Act
@@ -26,6 +26,9 @@ namespace ShapesDemoTests
         [InlineData(5, 1, 1, "Incorrect shape")]
         [InlineData(1, 5, 1, "Incorrect shape")]
         [InlineData(1, 1, 5, "Incorrect shape")]
+        [InlineData(2, 1, 1, "Incorrect shape")]
+        [InlineData(1, 2, 1, "Incorrect shape")]
+        [InlineData(1, 1, 2, "Incorrect shape")]
         public void Constructor_InvalidValues_ThrowsArgumentException(double a, double b, double c, string expectedMessage)
         {
             // Act

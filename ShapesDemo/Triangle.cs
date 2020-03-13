@@ -17,7 +17,7 @@ namespace ShapesDemo
 
             _longestSide = Math.Max(a, Math.Max(b, c));
 
-            if (_longestSide > a + b + c - _longestSide)
+            if (_longestSide >= a + b + c - _longestSide)
                 throw new ArgumentException("Incorrect shape");
 
             _a = a;
