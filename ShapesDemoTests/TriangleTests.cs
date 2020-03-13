@@ -29,7 +29,7 @@ namespace ShapesDemoTests
         [InlineData(2, 1, 1, "Incorrect shape")]
         [InlineData(1, 2, 1, "Incorrect shape")]
         [InlineData(1, 1, 2, "Incorrect shape")]
-        public void Constructor_InvalidValues_ThrowsArgumentException(double a, double b, double c, string expectedMessage)
+        public void Constructor_InvalidArguments_ThrowsArgumentException(double a, double b, double c, string expectedMessage)
         {
             // Act
             var ex = Record.Exception(() => new Triangle(a, b, c));
@@ -40,7 +40,7 @@ namespace ShapesDemoTests
         }
 
         [Fact]
-        public void GetSquare_ValidValue_ReturnsExpectedResult()
+        public void GetSquare_ValidArguments_ReturnsExpectedResult()
         {
             // Arrange
             const double a = 3;
